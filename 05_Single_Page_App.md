@@ -15,12 +15,12 @@ Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js;
 
 Palvelin-->>Selain: spa.js;
 
-Note right of Selain: Selain alkaa suorittamaan spa.js koodia -> Pyytää data.json;
+Note left of Selain: Selain alkaa suorittamaan spa.js koodia -> Pyytää data.json;
 
 Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json;
 
 Palvelin-->>Selain: data.json;
 
-Note right of Selain:Selain renderöi muistiinpanot
+Note left of Selain:Selain renderöi muistiinpanot
 
 ```
