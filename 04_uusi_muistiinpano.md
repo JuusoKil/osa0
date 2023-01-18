@@ -4,26 +4,26 @@ sequenceDiagram
     
 Note right of browser: Data lähetetään selaimesta palvelimelle
 
-Selain-->Palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note;
+Selain->>Palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note;
 
-Palvelin-->Selain: HTTP-statuskoodi 302;
+Palvelin-->>Selain: HTTP-statuskoodi 302;
 
-Selain-->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes;
+Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes;
 
-Palvelin-->Selain: HTML-koodi;
+Palvelin-->>Selain: HTML-koodi;
 
-Selain-->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css;
+Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css;
 
-Palvelin-->Selain: main.css;
+Palvelin-->>Selain: main.css;
 
-Selain-->Palvelin: HTTP GET ttps://studies.cs.helsinki.fi/exampleapp/main.js;
+Selain->>Palvelin: HTTP GET ttps://studies.cs.helsinki.fi/exampleapp/main.js;
 
-Palvelin-->Selain: main.js;
+Palvelin-->>Selain: main.js;
 
 Note right of browser: Selain alkaa suorittamaan main.js koodia -> Pyytää data.json
 
-Selain-->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json;
+Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json;
 
-Palvelin-->Selain: data.json;
+Palvelin-->>Selain: data.json;
 
 Note right of browser: Selain suorittaa tapahtumankäsittelijän -> Renderöi muistiinpanot
