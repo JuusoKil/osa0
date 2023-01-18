@@ -2,6 +2,7 @@
 
 title 0.4: uusi muistiinpano
 
+graph TD;
 note over Selain:
 Data lähetetään selaimesta palvelimelle
 end note
