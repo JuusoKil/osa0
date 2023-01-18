@@ -1,3 +1,5 @@
+```mermaid
+
 sequenceDiagram
     participant browser
     participant server
@@ -27,3 +29,5 @@ Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json;
 Palvelin-->>Selain: data.json;
 
 Note right of browser: Selain suorittaa tapahtumankäsittelijän -> Renderöi muistiinpanot
+
+```
