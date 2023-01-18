@@ -1,3 +1,5 @@
+```mermaid
+
 title 0.4: uusi muistiinpano
 
 note over Selain:
@@ -31,3 +33,5 @@ Palvelin->Selain: data.json
 note over Selain:
 Selain suorittaa tapahtumankäsittelijän -> Renderöi muistiinpanot
 end note
+
+```
