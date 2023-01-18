@@ -1,11 +1,8 @@
-```mermaid
-
-title 0.4: uusi muistiinpano
-
-graph TD;
-note over Selain:
-Data lähetetään selaimesta palvelimelle
-end note
+sequenceDiagram
+    participant browser
+    participant server
+    
+Note right of browser: Data lähetetään selaimesta palvelimelle
 
 Selain-->Palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note;
 
@@ -23,16 +20,10 @@ Selain-->Palvelin: HTTP GET ttps://studies.cs.helsinki.fi/exampleapp/main.js;
 
 Palvelin-->Selain: main.js;
 
-note over Selain:
-Selain alkaa suorittamaan main.js koodia -> Pyytää data.json
-end note
+Note right of browser: Selain alkaa suorittamaan main.js koodia -> Pyytää data.json
 
 Selain-->Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json;
 
 Palvelin-->Selain: data.json;
 
-note over Selain:
-Selain suorittaa tapahtumankäsittelijän -> Renderöi muistiinpanot
-end note
-
-```
+Note right of browser: Selain suorittaa tapahtumankäsittelijän -> Renderöi muistiinpanot
