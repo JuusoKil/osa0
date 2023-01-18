@@ -4,7 +4,7 @@ sequenceDiagram
     participant browser
     participant server
     
-Note right of browser: Data lähetetään selaimesta palvelimelle
+Note right of selain: Data lähetetään selaimesta palvelimelle
 
 Selain->>Palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note;
 
@@ -22,12 +22,12 @@ Selain->>Palvelin: HTTP GET ttps://studies.cs.helsinki.fi/exampleapp/main.js;
 
 Palvelin-->>Selain: main.js;
 
-Note right of browser: Selain alkaa suorittamaan main.js koodia -> Pyytää data.json
+Note right of selain: Selain alkaa suorittamaan main.js koodia -> Pyytää data.json
 
 Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json;
 
 Palvelin-->>Selain: data.json;
 
-Note right of browser: Selain suorittaa tapahtumankäsittelijän -> Renderöi muistiinpanot
+Note right of selain: Selain suorittaa tapahtumankäsittelijän -> Renderöi muistiinpanot
 
 ```
