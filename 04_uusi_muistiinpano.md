@@ -4,7 +4,7 @@ sequenceDiagram
     participant Selain
     participant Palvelin
     
-Note left of Selain: Data lähetetään selaimesta palvelimelle
+Note over of Selain: Data lähetetään selaimesta palvelimelle
 
 Selain->>Palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note;
 
