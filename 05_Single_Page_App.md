@@ -5,7 +5,7 @@ sequenceDiagram
 
 Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa;
 
-Palvelin-->>Selain: HTML-koodi;
+Palvelin->>Selain: HTML-koodi;
 
 Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css;
 
