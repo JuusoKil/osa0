@@ -4,7 +4,7 @@ sequenceDiagram
     participant Selain
     participant Palvelin
     
-Note right of Selain: Data lähetetään selaimesta palvelimelle
+Note left of Selain: Data lähetetään selaimesta palvelimelle
 
 Selain->>Palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note;
 
@@ -22,12 +22,12 @@ Selain->>Palvelin: HTTP GET ttps://studies.cs.helsinki.fi/exampleapp/main.js;
 
 Palvelin-->>Selain: main.js;
 
-Note right of Selain: Selain alkaa suorittamaan main.js koodia -> Pyytää data.json
+Note left of Selain: Selain alkaa suorittamaan main.js koodia -> Pyytää data.json
 
 Selain->>Palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json;
 
 Palvelin-->>Selain: data.json;
 
-Note right of Selain: Selain suorittaa tapahtumankäsittelijän -> Renderöi muistiinpanot
+Note left of Selain: Selain suorittaa tapahtumankäsittelijän -> Renderöi muistiinpanot
 
 ```
